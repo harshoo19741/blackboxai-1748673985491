@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guruji Farms - Batch Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    input, select, textarea {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col">
+  <header class="bg-black text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Guruji Farms</h1>
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:underline">Dashboard</a></li>
+        <li><a href="batch-management.html" class="hover:underline font-semibold underline">Batch Management</a></li>
+        <li><a href="inventory.html" class="hover:underline">Feed & Medicine Inventory</a></li>
+        <li><a href="growth-mortality.html" class="hover:underline">Daily Growth & Mortality</a></li>
+        <li><a href="employee-management.html" class="hover:underline">Employee Management</a></li>
+        <li><a href="sales-contracts.html" class="hover:underline">Sales & Contracts</a></li>
+        <li><a href="reports.html" class="hover:underline">Reports</a></li>
+        <li><a href="ledger.html" class="hover:underline">Ledger</a></li>
+        <li><a href="settings.html" class="hover:underline">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="flex-grow p-6">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Batch Management</h2>
+    <form class="space-y-6 max-w-6xl mx-auto" action="#" method="post">
+      <fieldset class="border border-gray-300 p-6 rounded shadow-lg bg-white">
+        <legend class="font-semibold mb-4 text-lg">Batch Details</legend>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <label for="branchName" class="block mb-2 font-medium text-gray-700">Branch Name</label>
+            <input type="text" id="branchName" name="branchName" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" placeholder="Bareilly UP -3" />
+          </div>
+          <div>
+            <label for="farmerName" class="block mb-2 font-medium text-gray-700">Farmer Name</label>
+            <input type="text" id="farmerName" name="farmerName" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" placeholder="Harsha Vardhan" />
+          </div>
+          <div>
+            <label for="lotNo" class="block mb-2 font-medium text-gray-700">Lot No</label>
+            <input type="text" id="lotNo" name="lotNo" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" placeholder="B391R44813" />
+          </div>
+          <div>
+            <label for="corporateContact" class="block mb-2 font-medium text-gray-700">Corporate Contact</label>
+            <input type="text" id="corporateContact" name="corporateContact" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" placeholder="Lokesh Dewagan Sir" />
+          </div>
+          <div>
+            <label for="hatchDate" class="block mb-2 font-medium text-gray-700">Hatch Date</label>
+            <input type="date" id="hatchDate" name="hatchDate" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" />
+          </div>
+          <div>
+            <label for="shedNo" class="block mb-2 font-medium text-gray-700">Shed No</label>
+            <input type="text" id="shedNo" name="shedNo" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" placeholder="01" />
+          </div>
+          <div>
+            <label for="reportDate" class="block mb-2 font-medium text-gray-700">Report Date</label>
+            <input type="date" id="reportDate" name="reportDate" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" />
+          </div>
+          <div>
+            <label for="age" class="block mb-2 font-medium text-gray-700">Age (days)</label>
+            <input type="number" id="age" name="age" class="w-full p-3 border border-gray-300 rounded shadow-sm focus:ring-2 focus:ring-blue-400 transition" min="0" placeholder="6" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-gray-300 p-4 rounded">
+        <legend class="font-semibold mb-2">Chick Statistics</legend>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label for="openingChicks" class="block mb-1 font-medium">Opening Chicks</label>
+            <input type="number" id="openingChicks" name="openingChicks" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="22310" />
+          </div>
+          <div>
+            <label for="mortalityToday" class="block mb-1 font-medium">Mortality Today (M)</label>
+            <input type="number" id="mortalityToday" name="mortalityToday" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="16" />
+          </div>
+          <div>
+            <label for="loose" class="block mb-1 font-medium">Loose</label>
+            <input type="number" id="loose" name="loose" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="10" />
+          </div>
+          <div>
+            <label for="fresh" class="block mb-1 font-medium">Fresh</label>
+            <input type="number" id="fresh" name="fresh" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="6" />
+          </div>
+          <div>
+            <label for="totalMortality" class="block mb-1 font-medium">Total Mortality</label>
+            <input type="number" id="totalMortality" name="totalMortality" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="182" />
+          </div>
+          <div>
+            <label for="mortalityPercent" class="block mb-1 font-medium">Mortality %</label>
+            <input type="number" step="0.01" id="mortalityPercent" name="mortalityPercent" class="w-full p-2 border border-gray-300 rounded" min="0" max="100" placeholder="0.82" />
+          </div>
+          <div>
+            <label for="closingChicks" class="block mb-1 font-medium">Closing Chicks</label>
+            <input type="number" id="closingChicks" name="closingChicks" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="22294" />
+          </div>
+          <div>
+            <label for="dispatchBirds" class="block mb-1 font-medium">Dispatch Birds</label>
+            <input type="number" id="dispatchBirds" name="dispatchBirds" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" />
+          </div>
+          <div>
+            <label for="weight" class="block mb-1 font-medium">Weight (kg)</label>
+            <input type="number" step="0.01" id="weight" name="weight" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" />
+          </div>
+          <div>
+            <label for="avgWeight" class="block mb-1 font-medium">Average Weight (gm)</label>
+            <input type="number" step="0.01" id="avgWeight" name="avgWeight" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-gray-300 p-4 rounded">
+        <legend class="font-semibold mb-2">Feed & Water</legend>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label for="feedOpeningB1" class="block mb-1 font-medium">Feed Opening B1 (bags)</label>
+            <input type="number" id="feedOpeningB1" name="feedOpeningB1" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="97" />
+          </div>
+          <div>
+            <label for="feedConsumptionB1" class="block mb-1 font-medium">Feed Consumption B1 (bags)</label>
+            <input type="number" id="feedConsumptionB1" name="feedConsumptionB1" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="12" />
+          </div>
+          <div>
+            <label for="totalFeedConsumption" class="block mb-1 font-medium">Total Feed Consumption (bags)</label>
+            <input type="number" id="totalFeedConsumption" name="totalFeedConsumption" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="61" />
+          </div>
+          <div>
+            <label for="feedStockB3" class="block mb-1 font-medium">Feed Stock B3 (bags)</label>
+            <input type="number" id="feedStockB3" name="feedStockB3" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" />
+          </div>
+          <div>
+            <label for="feedStockB1" class="block mb-1 font-medium">Feed Stock B1 (bags)</label>
+            <input type="number" id="feedStockB1" name="feedStockB1" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="85" />
+          </div>
+          <div>
+            <label for="avgFeed" class="block mb-1 font-medium">Average Feed (gm)</label>
+            <input type="number" step="0.01" id="avgFeed" name="avgFeed" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="32" />
+          </div>
+          <div>
+            <label for="totalAvgFeed" class="block mb-1 font-medium">Total Average Feed (gm)</label>
+            <input type="number" step="0.01" id="totalAvgFeed" name="totalAvgFeed" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="163" />
+          </div>
+          <div>
+            <label for="medicine" class="block mb-1 font-medium">Medicine</label>
+            <input type="text" id="medicine" name="medicine" class="w-full p-2 border border-gray-300 rounded" placeholder="Ib Cholor tab., Ib cid" />
+          </div>
+          <div>
+            <label for="waterAvg" class="block mb-1 font-medium">Water Average (ml)</label>
+            <input type="number" step="0.01" id="waterAvg" name="waterAvg" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="110" />
+          </div>
+          <div>
+            <label for="waterConsumption" class="block mb-1 font-medium">Water Consumption (lit)</label>
+            <input type="number" step="0.01" id="waterConsumption" name="waterConsumption" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="2000" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-gray-300 p-4 rounded">
+        <legend class="font-semibold mb-2">Weight by Day (gm)</legend>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div><label for="weightDay0" class="block mb-1 font-medium">0 Day</label><input type="number" id="weightDay0" name="weightDay0" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="39" /></div>
+          <div><label for="weightDay3" class="block mb-1 font-medium">3 Day</label><input type="number" id="weightDay3" name="weightDay3" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="83" /></div>
+          <div><label for="weightDay7" class="block mb-1 font-medium">7 Day</label><input type="number" id="weightDay7" name="weightDay7" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay11" class="block mb-1 font-medium">11 Day</label><input type="number" id="weightDay11" name="weightDay11" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay14" class="block mb-1 font-medium">14 Day</label><input type="number" id="weightDay14" name="weightDay14" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay18" class="block mb-1 font-medium">18 Day</label><input type="number" id="weightDay18" name="weightDay18" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay21" class="block mb-1 font-medium">21 Day</label><input type="number" id="weightDay21" name="weightDay21" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay25" class="block mb-1 font-medium">25 Day</label><input type="number" id="weightDay25" name="weightDay25" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay28" class="block mb-1 font-medium">28 Day</label><input type="number" id="weightDay28" name="weightDay28" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay30" class="block mb-1 font-medium">30 Day</label><input type="number" id="weightDay30" name="weightDay30" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay32" class="block mb-1 font-medium">32 Day</label><input type="number" id="weightDay32" name="weightDay32" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay34" class="block mb-1 font-medium">34 Day</label><input type="number" id="weightDay34" name="weightDay34" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay36" class="block mb-1 font-medium">36 Day</label><input type="number" id="weightDay36" name="weightDay36" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay39" class="block mb-1 font-medium">39 Day</label><input type="number" id="weightDay39" name="weightDay39" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay40" class="block mb-1 font-medium">40 Day</label><input type="number" id="weightDay40" name="weightDay40" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="" /></div>
+          <div><label for="weightDay41" class="block mb-1 font-medium">41 Day</label><input type="number" id="weightDay41" name="weightDay41" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" /></div>
+          <div><label for="weightDay42" class="block mb-1 font-medium">42 Day</label><input type="number" id="weightDay42" name="weightDay42" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" /></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-gray-300 p-4 rounded">
+        <legend class="font-semibold mb-2">Feed Conversion Ratio</legend>
+        <div>
+          <label for="fcr3day" class="block mb-1 font-medium">3 Day FCR</label>
+          <input type="number" step="0.001" id="fcr3day" name="fcr3day" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0.821" />
+        </div>
+      </fieldset>
+
+      <div class="pt-4">
+        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Save Batch Data</button>
+      </div>
+    </form>
+  </main>
+  <footer class="bg-black text-white p-4 text-center">
+    &copy; 2024 Guruji Farms, Makarandpur, Bhojipura, Bareilly, Uttar Pradesh
+  </footer>
+</body>
+</html>
