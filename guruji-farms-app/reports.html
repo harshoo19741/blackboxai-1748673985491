@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guruji Farms - Reports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .table-container {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col">
+  <header class="bg-black text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Guruji Farms</h1>
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:underline">Dashboard</a></li>
+        <li><a href="batch-management.html" class="hover:underline">Batch Management</a></li>
+        <li><a href="inventory.html" class="hover:underline">Feed & Medicine Inventory</a></li>
+        <li><a href="growth-mortality.html" class="hover:underline">Daily Growth & Mortality</a></li>
+        <li><a href="employee-management.html" class="hover:underline">Employee Management</a></li>
+        <li><a href="sales-contracts.html" class="hover:underline">Sales & Contracts</a></li>
+        <li><a href="reports.html" class="hover:underline font-semibold underline">Reports</a></li>
+        <li><a href="ledger.html" class="hover:underline">Ledger</a></li>
+        <li><a href="settings.html" class="hover:underline">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="flex-grow p-6 max-w-6xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Reports</h2>
+    <section class="mb-8">
+      <h3 class="text-xl font-semibold mb-2">Batch Comparison</h3>
+      <p>Compare performance metrics between different batches.</p>
+      <div class="table-container border border-gray-300 rounded p-4 overflow-x-auto">
+        <table class="min-w-full border-collapse border border-gray-300">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 p-2 text-left">Batch</th>
+              <th class="border border-gray-300 p-2 text-left">Hatch Date</th>
+              <th class="border border-gray-300 p-2 text-left">Mortality %</th>
+              <th class="border border-gray-300 p-2 text-left">Avg Weight (gm)</th>
+              <th class="border border-gray-300 p-2 text-left">Feed Conversion Ratio</th>
+              <th class="border border-gray-300 p-2 text-left">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-gray-300 p-2">B391R44813</td>
+              <td class="border border-gray-300 p-2">24/05/2024</td>
+              <td class="border border-gray-300 p-2">0.82%</td>
+              <td class="border border-gray-300 p-2">0 gm</td>
+              <td class="border border-gray-300 p-2">0.821</td>
+              <td class="border border-gray-300 p-2">Sample data</td>
+            </tr>
+            <!-- Additional batch rows can be added here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h3 class="text-xl font-semibold mb-2">Summary Reports</h3>
+      <p>Summary of farm performance, feed usage, mortality trends, and more.</p>
+      <!-- Placeholder for charts or summary data -->
+    </section>
+  </main>
+  <footer class="bg-black text-white p-4 text-center">
+    &copy; 2024 Guruji Farms, Makarandpur, Bhojipura, Bareilly, Uttar Pradesh
+  </footer>
+</body>
+</html>
