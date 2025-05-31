@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guruji Farms - Feed & Medicine Inventory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    input, select, textarea {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col">
+  <header class="bg-black text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Guruji Farms</h1>
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="index.html" class="hover:underline">Dashboard</a></li>
+        <li><a href="batch-management.html" class="hover:underline">Batch Management</a></li>
+        <li><a href="inventory.html" class="hover:underline font-semibold underline">Feed & Medicine Inventory</a></li>
+        <li><a href="growth-mortality.html" class="hover:underline">Daily Growth & Mortality</a></li>
+        <li><a href="employee-management.html" class="hover:underline">Employee Management</a></li>
+        <li><a href="sales-contracts.html" class="hover:underline">Sales & Contracts</a></li>
+        <li><a href="reports.html" class="hover:underline">Reports</a></li>
+        <li><a href="ledger.html" class="hover:underline">Ledger</a></li>
+        <li><a href="settings.html" class="hover:underline">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="flex-grow p-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Feed & Medicine Inventory</h2>
+    <form class="space-y-6" action="#" method="post">
+      <fieldset class="border border-gray-300 p-4 rounded">
+        <legend class="font-semibold mb-2">Feed Inventory</legend>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label for="feedType" class="block mb-1 font-medium">Feed Type</label>
+            <input type="text" id="feedType" name="feedType" class="w-full p-2 border border-gray-300 rounded" placeholder="Type of feed" />
+          </div>
+          <div>
+            <label for="feedQuantity" class="block mb-1 font-medium">Quantity (bags, 60 KGs each)</label>
+            <input type="number" id="feedQuantity" name="feedQuantity" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" />
+          </div>
+          <div>
+            <label for="feedDate" class="block mb-1 font-medium">Date</label>
+            <input type="date" id="feedDate" name="feedDate" class="w-full p-2 border border-gray-300 rounded" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="border border-gray-300 p-4 rounded">
+        <legend class="font-semibold mb-2">Medicine Inventory</legend>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label for="medicineName" class="block mb-1 font-medium">Medicine Name</label>
+            <input type="text" id="medicineName" name="medicineName" class="w-full p-2 border border-gray-300 rounded" placeholder="Name of medicine" />
+          </div>
+          <div>
+            <label for="medicineQuantity" class="block mb-1 font-medium">Quantity (units)</label>
+            <input type="number" id="medicineQuantity" name="medicineQuantity" class="w-full p-2 border border-gray-300 rounded" min="0" placeholder="0" />
+          </div>
+          <div>
+            <label for="medicineDate" class="block mb-1 font-medium">Date</label>
+            <input type="date" id="medicineDate" name="medicineDate" class="w-full p-2 border border-gray-300 rounded" />
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="pt-4">
+        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Save Inventory</button>
+      </div>
+    </form>
+  </main>
+  <footer class="bg-black text-white p-4 text-center">
+    &copy; 2024 Guruji Farms, Makarandpur, Bhojipura, Bareilly, Uttar Pradesh
+  </footer>
+</body>
+</html>
